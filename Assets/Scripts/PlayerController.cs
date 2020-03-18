@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     private Transform tf;
     private Rigidbody2D rb2d;
     private SpriteRenderer sr;
+    private Animator animator;
 
     public float speed = 5.0f;
     public float jumpForce = 10.0f;
@@ -19,6 +20,7 @@ public class PlayerController : MonoBehaviour
         tf = gameObject.GetComponent<Transform>();
         rb2d = gameObject.GetComponent<Rigidbody2D>();
         sr = gameObject.GetComponent<SpriteRenderer>();
+        animator = gameObject.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -27,7 +29,20 @@ public class PlayerController : MonoBehaviour
         //Controlls Horizontal movement
         float xMovement = Input.GetAxis("Horizontal") * speed;
         rb2d.velocity = new Vector2(xMovement, rb2d.velocity.y);
-        sr.flipY = rb2d.velocity.x < 0;
+        if (xMovement > 0)
+        {
+            sr.flipX = false;
+            animator.Play("PlayerWalk");
+        }
+        else if (xMovement < 0)
+        {
+            sr.flipX = true;
+            animator.Play("PlayerWalk");
+        }
+        else
+        {
+            animator.Play("PlayerIdle");
+        }
 
         //Detect if the player is on the ground
         RaycastHit2D hitInfo = Physics2D.Raycast(groundPoint.position, Vector2.down, 0.1f);
