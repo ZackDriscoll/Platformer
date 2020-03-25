@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     private SpriteRenderer sr;
     private Animator animator;
 
-    public float speed = 5.0f;
+    public float movementSpeed = 5.0f;
     public float jumpForce = 500.0f;
     public Transform groundPoint;
     public bool isGrounded = false;
@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         //Controlls Horizontal movement
-        float xMovement = Input.GetAxis("Horizontal") * speed;
+        float xMovement = Input.GetAxis("Horizontal") * movementSpeed;
         rb2d.velocity = new Vector2(xMovement, rb2d.velocity.y);
         if (xMovement > 0)
         {
