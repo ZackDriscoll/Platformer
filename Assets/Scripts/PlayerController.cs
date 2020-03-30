@@ -55,12 +55,18 @@ public class PlayerController : MonoBehaviour
             isGrounded = false;
         }
 
-        //Jump
+        //Jump with spacebar
         if(Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             Debug.Log("Jump");
             rb2d.AddForce(Vector2.up * jumpForce);
         }
-        
+
+        //Jump with up arrow key
+        if (Input.GetKeyDown(KeyCode.UpArrow) && isGrounded)
+        {
+            Debug.Log("Jump");
+            rb2d.AddForce(Vector2.up * jumpForce);
+        }
     }
 }
