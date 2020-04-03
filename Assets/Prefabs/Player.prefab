@@ -193,7 +193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1579317b26aeb74391ecf4417ff7cef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  jumpForce: 250
+  movementSpeed: 5
+  jumpForce: 350
   groundPoint: {fileID: 1483119987465768238}
   isGrounded: 0

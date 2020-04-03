@@ -68,5 +68,12 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Jump");
             rb2d.AddForce(Vector2.up * jumpForce);
         }
+
+        //Jump with W key
+        if (Input.GetKeyDown(KeyCode.W) && isGrounded)
+        {
+            Debug.Log("Jump");
+            rb2d.AddForce(Vector2.up * jumpForce);
+        }
     }
 }

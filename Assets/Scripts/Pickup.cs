@@ -10,6 +10,7 @@ public class Pickup : MonoBehaviour
     //Audio clip to play when pickup is collected
     public AudioClip audioClip;
 
+    //Coin actions
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
