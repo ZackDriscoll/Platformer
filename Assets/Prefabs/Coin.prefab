@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7760837611683436803}
-  - component: {fileID: 7760837611683436802}
-  - component: {fileID: 7760837611683436805}
+  - component: {fileID: 5742254885109016850}
   - component: {fileID: 52626551153195689}
+  - component: {fileID: 5374878392779394895}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Untagged
@@ -27,13 +27,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7760837611683436804}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.89, y: -0.36, z: -65.87695}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.417, y: -3.061, z: -65.87695}
+  m_LocalScale: {x: 0.132104, y: 0.132104, z: 0.132104}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &7760837611683436802
+--- !u!212 &5742254885109016850
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -71,33 +71,17 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 716db6f813526084cb13380a403c8ee2, type: 2}
+  m_Sprite: {fileID: 21300000, guid: bbb0d81a4f1f398409940dd19f0d986d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.2, y: 0.2}
+  m_Size: {x: 8, y: 6.22}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!70 &7760837611683436805
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7760837611683436804}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.016994536, y: -0.08490229}
-  m_Size: {x: 0.7660109, y: 0.93019557}
-  m_Direction: 0
 --- !u!114 &52626551153195689
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -111,4 +95,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points: 10
-  audioClip: {fileID: 0}
+  audioClip: {fileID: 8300000, guid: e848e5af7cbf7f240a8e144b4bf17bf6, type: 3}
+--- !u!58 &5374878392779394895
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7760837611683436804}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.012356281, y: 0.111102104}
+  serializedVersion: 2
+  m_Radius: 2.7396817

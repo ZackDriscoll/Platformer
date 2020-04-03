@@ -10,18 +10,6 @@ public class Pickup : MonoBehaviour
     //Audio clip to play when pickup is collected
     public AudioClip audioClip;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
@@ -30,10 +18,12 @@ public class Pickup : MonoBehaviour
             GameManager.instance.playerScore += points;
 
             //Play the pickup sound effect (once I get it)
-            //AudioSource.PlayClipAtPoint(audioClip, transform.position);
+            AudioSource.PlayClipAtPoint(audioClip, transform.position);
 
             //Destroy our pickup
             Destroy(this.gameObject);
+
+            Debug.Log("I got a coin!");
         }
     }
 }
